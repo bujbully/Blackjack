@@ -3,7 +3,6 @@ import random
 import os
 import copy
 
-
 pygame.init()
 
 card_values = ['2', '3', '4', '5', '6', '7', '8', '9', 'J', 'Q', 'K', 'A']
@@ -114,7 +113,6 @@ def draw_game(act, result):
         screen.blit(font.render(results[result], True, "white"), (120,25))
         deal = pygame.draw.rect(screen, "white", [160, 320, 270, 70], 0, 5)
         pygame.draw.rect(screen, "black", [160, 320, 270, 70], 3, 5)
-        # pygame.draw.rect(screen, "black", [164, 315, 276, 66], 3, 5)
         deal_text = font.render("DEAL AGAIN", True, "black")
         screen.blit(deal_text, (190, 335))
         button_list.append(deal)
@@ -152,14 +150,6 @@ def check_win(hand_act, player, dealer, result, records, add):
                 records[0]+=1
             add=False
     return  result,records, add
-
-
-
-
-
-
-
-
 
 
 run = True
@@ -226,8 +216,5 @@ while run:
     outcome, record, add_game = check_win(hand_active, player_score, dealer_score, outcome, record, add_game)
 
 
-
-
     pygame.display.flip()
 pygame.quit()
-
