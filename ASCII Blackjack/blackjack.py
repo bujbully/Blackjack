@@ -96,19 +96,8 @@ def blackjack():
     print(f"Your final hand: {players_hand} with a total of {players_score}")
     print(f"The dealer ended the game with: {dealers_hand} and a total of {dealers_score}")
     print(compare(players_score, dealers_score))
-    # print(dealers_score, players_score)
 
     if end:
-        # if compare(players_score,dealers_score)=="YOU LOSE!" or "BUST!\nHOUSE WINS!" or "The dealer has a blackjack!\nHOUSE WINS!":
-        #     tally+=1
-        #     house+=1
-        # elif compare(players_score,dealers_score)=="You have a blackjack!\nYOU WIN!" or "The house had a bust!\nYOU WIN!" or "YOU WIN!":
-        #     tally+=1
-        #     player+=1
-        # else:
-        #     tally+=1
-        #     player+=1
-
         print(f"For a total of {tally} games, you have won {player} and the dealer has won {house}")
         print("\n" * 10)
         if input("The dealer would like to deal again. Do you want to continue playing?\n").lower() == "y":
